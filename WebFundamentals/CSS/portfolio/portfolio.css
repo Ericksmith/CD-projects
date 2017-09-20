@@ -1,0 +1,149 @@
+.wrapper {
+    background: #1d0d11; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#1d0d11, #6f5964, #1d0d11); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1d0d11, #6f5964, #1d0d11); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1d0d11, #6f5964, #1d0d11); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1d0d11, #6f5964, #1d0d11); /* Standard syntax */
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1138px;
+    padding-left: 65px;
+}
+
+#profilePic {
+    width: 400px;
+    border: solid 5px #c0c0c0;
+    display: inline-block;
+    margin: 10px 20px 10px 0px;
+}
+
+.header {
+    display:block;
+    background-color: #f8f8f8;
+    padding-top:40px;
+    height:60px;
+    width: 1054px;
+}
+
+#name{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+#nickName {
+    float: right;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 20px;
+}
+
+#about{
+    width: 600px;
+    height: 263.15px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    padding: 5px;
+    background: #daccd9; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#daccd9, #f2edf2, #daccd9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#daccd9, #f2edf2, #daccd9); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#daccd9, #f2edf2, #daccd9); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#daccd9, #f2edf2, #daccd9); /* Standard syntax */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.siteBoxes {
+    width:348px;
+    display: inline-block;
+    vertical-align: top;
+    background: #daccd9; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#daccd9, #f2edf2, #daccd9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#daccd9, #f2edf2, #daccd9); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#daccd9, #f2edf2, #daccd9); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#daccd9, #f2edf2, #daccd9); /* Standard syntax */
+}
+
+.sitePhotos {
+    width:347px;
+}
+
+.sitesLower {
+    padding-left:15px;
+    height: 248px;
+}
+
+#aboutTitleBar {
+    background: #898895; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#afafb3, #8b8a96, #afafb3); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#afafb3, #8b8a96, #afafb3); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#afafb3, #8b8a96, #afafb3); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#afafb3, #8b8a96, #afafb3); /* Standard syntax */
+    color: #F0EAEA;
+    font-family: Helvetica Verdana, Geneva, Tahoma, sans-serif;
+    margin: -5px;
+    height: 45px;
+}
+
+.langBadges{
+    width: 50px;
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.siteUpper {
+    height:420px;
+}
+
+.titleBars {
+    background: #898895; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#afafb3, #8b8a96, #afafb3); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#afafb3, #8b8a96, #afafb3); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#afafb3, #8b8a96, #afafb3); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#afafb3, #8b8a96, #afafb3); /* Standard syntax */
+    color: #F0EAEA;
+    font-family: Helvetica Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    height: 45px;
+}
+
+.techBar {
+    margin-left:-15px;
+}
+
+.siteLink {
+    display:inline-block;
+    border:solid 1px #001F00;
+    background-color: #407d61;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #f1edf5;
+    margin-left: 98px;
+    box-shadow: 3px 4px 2px #000002;
+    margin-top: 8px;    
+}
+
+.footer {
+    display: inline-block;
+    background-color: #f8f8f8;
+    width: 1053px;
+}
+
+#contactInfo {
+    display:block;
+    margin-left: 412px;
+}
+
+#socialMedia {
+    display:block;
+    margin-left: 349px;
+}
+
+#socialMedia > a {
+    vertical-align: top;
+    font-style: italic;
+}
+
+.socialMediaLogo {
+    width:20px;
+}
