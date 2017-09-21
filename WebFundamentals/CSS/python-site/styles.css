@@ -1,0 +1,60 @@
+* {
+	padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    background: #245076; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#245076, #3373aa); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#245076, #3373aa); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#245076, #3373aa); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#245076, #3373aa); /* Standard syntax */
+    width:970px;
+    padding-top: 2px;
+}
+
+#textSizer {
+    display: block;
+    margin: 7px 40px 0px 745px;
+    color: white;
+}
+
+#textSizer > a {
+    color: #d5b300;
+}
+
+.header {
+    display: inline-block; 
+    width: 930px;
+}
+
+#pythonLogo {
+    display: inline-block;
+    width: 385px;
+    margin: 0px 25px;
+}
+
+.seachArea {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#searchBar {
+
+}
+
+#searchButton {
+    border: 1px grey solid;
+    background-color: #245076;
+    width: 50px;
+}
+
+.navBar {
+    display: block;
+    background-color: #477ead;
+}
+
+.navBarLinks {
+    display: inline-block;
+}
