@@ -51,12 +51,14 @@
 .navBar {
     display: inline-block;
     width: 178px;
+    vertical-align: top;
 }
 
 .navBarTop {
     height:192px;
     border-bottom: 2px grey solid;
     padding-top: 28px;
+
 }
 
 .navBarTop > h4 {
@@ -146,3 +148,47 @@
     background: -moz-linear-gradient(#77d0df, #00c0df); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#77d0df, #00c0df); /* Standard syntax */
 }
+
+.contentMain {
+    display: inline-block;
+    width: 750px;
+    margin-left: 22px;;
+}
+
+.homeBar {
+    display: inline-block;
+    width: 740px;
+}
+
+#homeImg {
+    display: inline-block;
+}
+
+#homeImg img {
+    width: 20px;
+    display: inline-block;
+}
+
+#DNS {
+    font-size: 14px;
+    color: grey;
+}
+
+#phoneImg {
+    width: 20px;
+}
+
+.contactInfo {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+}
+
+.mainTop {
+    display: inline-block;
+}
+
+.contentTitles {
+    color: lightskyblue;
+}
+
