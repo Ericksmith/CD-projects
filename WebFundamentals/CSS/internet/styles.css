@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 .wrapper {
@@ -93,6 +94,7 @@
 
 #videoButton {
     background-color: #3976ab;
+    margin-bottom: 3px;
 }
 
 #resourcesButton {
@@ -165,30 +167,113 @@
 }
 
 #homeImg img {
-    width: 20px;
+    width: 40px;
     display: inline-block;
+    margin-top: 9px;
+    position: relative;
+    top: -7px;
 }
 
 #DNS {
-    font-size: 14px;
-    color: grey;
-}
-
-#phoneImg {
-    width: 20px;
+    font-size: 18px;
+    color: #2968a0;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 22px;
 }
 
 .contactInfo {
-    width: 100px;
+    width: 236px;
     display: inline-block;
     text-align: right;
+    margin-left: 417px;
+}
+
+#phoneImg {
+    width: 40px;
+    display: inline-block;
+    margin-top: 8px;
+    vertical-align: top;
+}
+
+.contactInfoTxt > h3 {
+    color: #00c0df;
+    font-size: 27px;
+}
+
+.contactInfoTxt > h6, p {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.contactInfoTxt {
+    display: inline-block;
 }
 
 .mainTop {
     display: inline-block;
+    border-top: 1px solid #cfcfcf;
+    width: 750px;
+    margin-top: 10px;
 }
 
 .contentTitles {
-    color: lightskyblue;
+    color: #22649e;
+    font-size: 20px;
+    margin: 5px 0px;
 }
 
+.mainTop > p {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.mainTop > ul > li {
+    list-style-position: inside;
+    margin-left: 42px;
+    list-style: none;
+    list-style-type: disc;
+}
+
+.mainTop > img {
+    width: 265px;
+    margin-left: 215px;
+    margin-top: 15px;
+}
+
+.mainTop > ol > li {
+    list-style-position: inside;
+    margin-left: 42px;
+    list-style: none;
+    list-style-type: decimal;
+}
+
+.mainBottom {
+    width: 710px;
+    margin: 10px;
+    border: 5px solid #0085e0;
+    border-bottom: 0px;
+    padding: 8px 8px 0px 8px;
+}
+
+.mainBottom > img {
+    width: 120px;
+    display: inline-block;
+}
+
+.mainBottom > h3, p {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mainBottom  p {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+
+.big3Txt {
+    display: inline-block;
+    width: 580px;
+    vertical-align: top;
+}
