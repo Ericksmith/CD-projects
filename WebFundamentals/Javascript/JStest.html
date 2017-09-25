@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    function printRange(start, end, step = 1) { 
+    if (end == undefined) {
+        end = start;
+        start = 0;
+    }
+    result = [];
+    for(var i = start; i < end; i += step) {
+        result.push(i);
+    }
+    return result;
+}
+
+console.log(printRange(2, 10, 2));
+console.log("test 1 end");
+console.log(printRange(2, 10));
+console.log("test 2 end");
+console.log(printRange(4));
+console.log("test 3 end");
+    </script>
+</head>
+</html>
