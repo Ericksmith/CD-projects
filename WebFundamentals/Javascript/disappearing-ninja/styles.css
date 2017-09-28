@@ -1,0 +1,11 @@
+.ninjaRow {
+    width: 800px;
+    display: inline-block;
+    margin:30px;
+}
+
+.ninjaImg {
+    width: 150px;
+    display: inline-block;
+    border: 3px solid black;
+}

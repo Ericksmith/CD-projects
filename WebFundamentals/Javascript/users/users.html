@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="tableWrapper">
+            <table>
+                <tr>
+                    <th id="0">First Name</th>
+                    <th id="1">Last Name</th>
+                    <th id="2">Email Address</th>
+                    <th id="3">Contact #</th>
+                </tr>
+                <tr id="targetRow">
+
+                </tr>
+            </table>
+        </div>
+        <h2>Add User</h2>
+        <form id="infoForm">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname">
+            <label for="email">Email Address</label>
+            <input type="text" name="email" id="email">
+            <label for="phoneNum">Phone Number</label>
+            <input type="text" name="phoneNum" id="phoneNum">
+            <input type="submit" value="submit" onsubmit="return false" id='submitButton'>
+        </form>
+    </div>
+</body>
+</html>

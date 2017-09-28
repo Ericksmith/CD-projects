@@ -1,0 +1,27 @@
+.contactCard{
+    width: 200px;
+    height: 150px;
+    border: 3px solid black;
+}
+
+#formArea {
+    display:inline-block;
+    width:480px;
+    vertical-align: top;
+}
+
+#contactArea {
+    width: 300px;
+    display: inline-block;
+}
+
+p{
+    font-weight: bold;
+    font-size:19px;
+    text-align: center;
+}
+
+.discriptionP{
+    font-size: 13px;
+    text-align: left;
+}

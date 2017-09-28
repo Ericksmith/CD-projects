@@ -1,0 +1,25 @@
+#tableWrapper{
+    border: 2px solid black;
+    display: inline-block;
+}
+
+#infoForm {
+    border-top: 1px solid black;
+    width: 300px;
+}
+
+th{
+    width: 170px;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+
+
+input {
+    display: block;
+    margin: 15px;
+}

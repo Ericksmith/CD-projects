@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>jQuery tests</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="scripts.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>jQuery Tests</h1>
+        <div class="block">
+            <h3>.click()</h3>
+            <p class="click">click me</p>
+            <p class="click">click me</p>
+            <p class="click">click me</p>
+            <p class="click">click me</p>
+            <p class="click">click me</p>
+        </div>
+        <div class="block">
+            <h3>.hide()</h3>
+            <p class="hide">hide me</p>
+            <p class="hide">hide me</p>
+            <p class="hide">hide me</p>
+            <p class="hide">hide me</p>
+            <p class="hide">hide me</p>
+            <p class="hide">hide me</p>
+        </div>
+        <div class="block">
+            <h3>.show()</h3>
+            <button id="show">Click me to see more</button>
+            <img src="http://i.aaronmbushnell.com/wiggedout.gif" id="hiddenShow">
+        </div>
+        <div class="block">
+            <h3>.toggle</h3>
+            <button id="toggle">Click her for an image</button>
+            <img id="toggleImage" src="https://i.pinimg.com/originals/c3/f3/9b/c3f39b8bf182eb382b909d1749c09789.jpg">
+        </div>
+        <div class="block">
+            <h3>.slideDown()</h3>
+            <button id="slideDown">Click for a suprise</button>
+            <img id="slideImage" src="http://i0.kym-cdn.com/photos/images/facebook/000/002/110/longcat.jpg">
+        </div>
+        <div class="block divRemove">
+            <h3>.slideUp</h3>
+            <button id="slideUp">Click button to destroy div</button>
+        </div>
+        <div class="block">
+            <h3>.slideToggle()</h3>
+            <button id="slideToggle">Toggle image</button>
+            <img id="toggleSlideImage" src="http://i.imgur.com/mc7FP.jpg">
+        </div>
+        <div class="block">
+            <h3>.fadeIn()</h3>
+            <button id="fadeIn">Click me</button>
+            <img id="fadeInImage" src="http://i0.kym-cdn.com/photos/images/original/000/051/181/high-top-fade.jpg">
+        </div>
+        <div class="block">
+            <h3>.fadeOut()</h3>
+            <button id="fadeOut">Click to fade out above</button>
+        </div>
+        <div class="block">
+            <h3>.addClass()</h3>
+            <button id="addClass">Class this place up</button>
+            <p class="noClass">Hello World</p>
+        </div>
+        <div class="block">
+            <h3>.before()</h3>
+            <p id="beforeThis">Hey! How'd you get up there!?</p>
+        </div>
+        <div class="block">
+            <h3>.after()</h3>
+            <p id="afterThis">Stop messing with my DOM!</p>
+        </div>
+        <div class="block">
+            <h3>.append()</h3>
+            <button id="appendButton">Click her to append the list!</button>
+            <ol id="appendThis">
+                <li>I loaded with the Dom</li>
+                <li>Me too!</li>
+                <li>Same here!</li>
+            </ol>
+        </div>
+        <div class="block">
+            <h3>.html()</h3>
+            <div id="hoverHere">
+                <p id='hoverTarget'>Hover mouse here to change to H1</p>
+            </div>
+        </div>
+        <div class="block">
+            <h3>.arrt()</h3>
+            <button id="arrtButton">Click to change # on list.</button>
+            <ol >
+                <li id="targetList">Stuff in list</li>
+                <li>Stuff in list</li>
+                <li>Stuff in list</li>
+                <li>Stuff in list</li>
+            </ol>
+        </div>
+        <div class="block">
+            <h3>.val()</h3>
+            <select id ="valTest">
+                <option>Number 1</option>
+                <option>Number 2</option>
+            </select>
+            <p id="valText">Val test</p>
+        </div>
+        <div class="block">
+            <h3>.text()</h3>
+            <p id="textOne">totally out of order.</p>
+            <p id="textTwo">This sentance is </p>
+            <p id="textTarget"></p>
+        </div>
+        <div class="block">
+            <h3>.data()</h3>
+            <button id="dataButton">Click to add data</button>
+            <button id="dataSetter">Click to set data</button>
+            <p id="dataTarget"></p>
+        </div>
+    </body>
+</html>

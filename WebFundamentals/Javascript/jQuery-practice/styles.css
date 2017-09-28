@@ -1,0 +1,53 @@
+.block {
+    width: 550px;
+    height:200px;
+    border: 2px solid black;
+}
+
+h3 {
+    margin-left: 350px;
+    color: teal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    display: inline;
+}
+
+#hiddenShow {
+    display: none;
+}
+
+p { 
+    line-height: 3px;
+    vertical-align: top;
+}
+
+button {
+    vertical-align: top;
+}
+
+img {
+    width:200px;
+    display: none;
+}
+
+#slideImage {
+    width: 100px;
+}
+
+.classyClass {
+    color: red;
+    font-weight: italic;
+    font-size: 30px;
+}
+
+#hoverHere {
+    width:300px;
+    height: 100px;
+    background-color: gold;
+}
+
+#hoverHere > p {
+    margin-top: 37px;
+    margin-left: 29px;
+    display: inline-block;
+}

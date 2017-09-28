@@ -1,0 +1,16 @@
+#pokeBall {
+    width:800px;
+    height: 600px;
+    overflow: scroll;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+
+#pokeStatArea{
+    display: inline-block;
+    border: 15px solid red;
+    width:400px;
+    height: 600px;
+    vertical-align: top;
+}
