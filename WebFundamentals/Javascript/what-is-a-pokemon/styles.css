@@ -10,7 +10,8 @@
 #pokeStatArea{
     display: inline-block;
     border: 15px solid red;
-    width:400px;
-    height: 600px;
+    width: 277px;
+    height: 500px;
     vertical-align: top;
 }
+
