@@ -1,0 +1,50 @@
+#wrapper{
+    width: 1100px;
+    background-color: grey;
+    padding: 20px;
+}
+
+h1{
+    font-size:40px;
+}
+
+#content{
+    background-color: #7E0505;
+    width:1060px;
+}
+
+
+#houseSelect{
+    width: 1060px;
+    height: 300px;
+    background-color: grey;
+}
+
+.houseCards{
+    width: 200px;
+    height: 250px;
+    background-color: #7E0505;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#houseDisplay{
+    width:1020px;
+    height: 500px;
+}
+
+.houseStats{
+    width: 800px;
+    height: 500px;
+}
+
+.houseImages {
+    width:140px;
+    margin-left: 86px;
+    margin-top: 40px;
+}
+
+.dispalyCard{
+    width: 900px;
+    background-color: white;
+}
