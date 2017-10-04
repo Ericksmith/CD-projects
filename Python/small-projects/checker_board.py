@@ -1,9 +1,7 @@
 
 def checker_board(num):
     for i in range(num):
-        if i%2 == 0:
-            print('* * * *')
-        if i%2 != 0:
-            print(' * * * *')
+        print('* * * *')
+        print(' * * * *')
 
-checker_board(12)
+checker_board(6)
