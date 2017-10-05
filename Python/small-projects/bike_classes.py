@@ -14,15 +14,15 @@ class Bike(object):
 
     def reverse(self):
         print('Reversing')
-        self.miles -= 5
+        if self.miles > 4:
+            self.miles -= 5
         return self
 
 
     
-
-bike1 = Bike(100, 30)
+bike1 = Bike(100, 5)
+bike2 = Bike(1000, 20)
+bike1.ride().ride().ride().reverse()
 bike1.displayinfo()
-bike1.ride()
-print(bike1.miles)
-bike1.reverse()
-print(bike1.miles)
+bike2.ride().ride().reverse().displayinfo()
+bike2.reverse().reverse().reverse().reverse().reverse().reverse().displayinfo()
