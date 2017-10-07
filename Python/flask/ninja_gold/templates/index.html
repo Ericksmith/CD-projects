@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Money</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="goldDisplay">
+            <h3 id="yourGold">Your Gold:  </h3>
+            <div id="goldAmount">{{gold}}</div>
+        </div>
+        <div id="locations">
+            <div class="locationBox">
+                <h3>Farm</h3>
+                <h2>(earns 10-20 gold)</h2>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="building" value='farm'>
+                    <input type="submit" name="farm" value="Find Gold!">
+                </form>
+            </div>
+            <div class="locationBox">
+                <h3>Cave</h3>
+                <h2>(earns 5-10 gold)</h2>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="building" value='cave'>
+                    <input type="submit" name="cave" value="Find Gold!">
+                </form>
+            </div>
+            <div class="locationBox">
+                <h3>House</h3>
+                <h2>(earns 2-5 gold)</h2>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="building" value='house'>
+                    <input type="submit" name="house" value="Find Gold!">
+                </form>
+            </div>
+            <div class="locationBox">
+                <h3>Casino</h3>
+                <h2>(earn/lose 0-50 gold)</h2>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="building" value='casino'>
+                    <input type="submit" name="casino" value="Find Gold!">
+                </form>
+            </div>
+        </div>
+        <h3>Activity</h3>
+        <div id="activity">
+            {% for i in log %}
+                <p>{{i}}</p>
+            {% endfor %}
+        </div>
+    </div>    
+</body>
+</html>

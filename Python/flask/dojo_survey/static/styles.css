@@ -1,0 +1,10 @@
+#survey{
+    display: inline-block;
+    border: 2px solid black;
+    width: 500px;
+    text-align: center;
+}
+
+#survey > *{
+    display: block;
+}
