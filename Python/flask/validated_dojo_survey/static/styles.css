@@ -1,0 +1,28 @@
+#survey{
+    display: inline-block;
+    border: 2px solid black;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#comment {
+    display: block;
+}
+
+.input{
+    display: block;
+}
+
+form {
+    display: inline-block;
+    height: 300px;
+
+}
+
+p {
+    color: red;
+    
+}
+

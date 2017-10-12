@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reg Form</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <div id="wrapper">
+        <form action="/process" method='post'>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p id='messages'>{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class="formField">
+                <label for="email">Email:</label>
+                <input type="text" name="email">
+            </div>
+            <div class="formField">
+                <label for="first_name">First name:</label>
+                <input type="text" name="first_name">
+            </div>
+            <div class="formField">
+                <label for="last_name">Last name:</label>
+                <input type="text" name="last_name">
+            </div>
+            <div class="formField">
+                <label for="password">Password:</label>
+                <input type="text" name="password">
+            </div>
+            <div class="formField">
+                <label for="password_confirm">Confirm Password:</label>
+                <input type="text" name='password_confirm'>
+            </div>
+            <div class='formField'>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
