@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friends List</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <h1>Friends:</h1>
+    <table>
+        <TH>Name</TH>
+        <TH>Age</TH>
+        <TH>Friends Since</TH>
+        <TH>Year</TH>
+        {% for f in friends %}
+            <tr>
+                <td>{{f.name}}</td>
+                <td>{{f.age}}</td>
+                <td>{{f.month}}-{{f.day}}</td>
+                <td>{{f.year}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <form action="/process" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name">
+        <label for="age">age</label>
+        <input type="text" name="age">
+        <label for="since">Friend Since</label>
+        <input type="date" name="since">
+        <input type="submit">
+    </form>
+</body>
+</html>
