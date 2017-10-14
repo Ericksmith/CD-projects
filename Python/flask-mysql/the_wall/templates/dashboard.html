@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <div id='wrapper'>
+        <div id='header'>
+            <h2>The Wall</h2>
+            <h3>Welcome {{first_name}}</h3>
+            <a href="/logout"><button>logout</button></a>
+        </div>
+        <div id='content'>
+            <h2>Post a message:</h2>
+            <form action="/makePost" method="post">
+                <textarea id="postTextArea" rows="8" cols="90" name='postText'></textarea>
+                <input type="submit" value="Post a Message" id='postButton'>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

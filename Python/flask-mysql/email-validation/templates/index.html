@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email Validator</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div id='warning'>
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}    
+    {% endwith %}
+    <form action="/process" method="post">
+        <label for="email">Email Address</label>
+        <input type="text" name="email">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

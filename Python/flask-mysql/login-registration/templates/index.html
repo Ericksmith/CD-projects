@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <h2>Register an account:</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+               <p> {{message}} </p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="/process" method="POST" id='register'>
+        <div class='row'>
+        <label for="first_name">First name:</label>
+        <input type="text" name="first_name">
+        </div>
+        <div class='row'>
+        <label for="last_name">Last name:</label>
+        <input type="text" name="last_name">
+        </div>
+        <div class='row'>
+        <label for="email">Email:</label>
+        <input type="text" name="email">
+        </div>
+        <div class='row'>
+        <label for="password">Password:</label>
+        <input type="text" name="password">
+        </div>
+        <div class='row'>
+        <label for="password_confirm">Confirm password:</label>
+        <input type="text" name="password_confirm">
+        </div>
+        <input type="submit" value="Register">
+    </form>
+    <h2>Existing user sign in:</h2>
+    <form action="/signIn" method="post">
+    <label for="email">Email:</label>
+    <input type="text" name='email'>
+    <label for="password">Password:</label>
+    <input type="text" name="password">
+    <input type="submit" value="Sign in">
+    </form>
+</body>
+</html>

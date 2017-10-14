@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email validated</title>
+</head>
+<body>
+    <div id='goodEmail'><p>The email address you entered
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        is a VALID email address! Thank you!</p></div>
+    <h2>Email Addresses entered</h2>
+    {% for e in emails %}
+        <p>{{e.email}}   {{e.created_at}}</p>
+    {% endfor %}
+</body>
+</html>
