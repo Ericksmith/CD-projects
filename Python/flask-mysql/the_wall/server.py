@@ -5,9 +5,11 @@ import crypt
 import re
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
+
 app = Flask(__name__)
 app.secret_key = "blahbdsaflah"
 mysql = MySQLConnector(app, 'mydb')
+app.jinja_env.add_extension('jinja2.ext.loopcontrols')
 
 @app.route('/')
 def index():
@@ -67,13 +69,41 @@ def dashboard():
     if session.get('logged_in') != True:
         return redirect('/')
     userId = session.get('id')
-    query = 'SELECT first_name FROM users WHERE id = '+ str(userId)
-    response = mysql.query_db(query)
-    first_name = response[0]['first_name']
-    query = 'SELECT * FROM posts ORDER BY id ASC Limit 10'
+    query = 'SELECT * FROM users'
+    users = mysql.query_db(query)
+    for i in users:
+        if i['id'] == userId:
+            first_name = i['first_name']
+    query = 'SELECT * FROM posts ORDER BY posts.id DESC'
     posts = mysql.query_db(query)
-    print(posts)
-    return render_template('dashboard.html', first_name = first_name)
+    query = 'SELECT * FROM comments ORDER BY id ASC'
+    comments = mysql.query_db(query)
+    return render_template('dashboard.html', first_name = first_name, posts = posts, users = users, comments = comments)
+
+@app.route('/comment', methods=['post'])
+def comment():
+    postId = request.form['postId']
+    commentTxt = request.form['comment']
+    query = 'INSERT INTO comments(users_id, posts_id, comment, created_at, updated_at) VALUES( :id, :posts_id, :comment, NOW(), NOW())'
+    data = {
+        'id' : session['id'],
+        'posts_id': postId,
+        'comment' : commentTxt
+    }
+    mysql.query_db(query, data)
+    return redirect('/dashboard')
+
+@app.route('/makePost',  methods=['post'])
+def makePost():
+    postText = request.form['postText']
+    query = 'INSERT INTO posts(users_id, message, created_at, updated_at) VALUES( :user_id, :postText, NOW(), NOW())'
+    data = {
+        'user_id': session['id'],
+        'postText': postText,
+    }
+    mysql.query_db(query, data)
+    return redirect('/dashboard')
+
 
 @app.route('/logout')
 def logout():

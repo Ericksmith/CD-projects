@@ -20,7 +20,7 @@ input {
 
 body {
     width: 1150px;
-    background-color: grey;
+    background-color: rgb(212, 211, 211);
 }
 
 #wrapper{
@@ -44,7 +44,7 @@ body {
 
 #header > h3{
     margin-left: 610px;
-    margin-right: 50px;
+    margin-right: 50px;Jim
 }
 
 #post {
@@ -65,8 +65,28 @@ body {
     margin-left: 620px;
     background-color: rgb(106, 106, 250);
     box-shadow: 5px 5px 5px black;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#commentButton {
+    display: block;
+    margin-left: 590px;
+    background-color: rgb(3, 94, 3);
+    box-shadow: 5px 5px 5px black;
+    margin-bottom: 20px;
+    color: white;
 }
 
 #postTextArea {
     display: block;
+}
+
+.post {
+    padding: 10px;
+    margin: 20px;
+}
+
+.comment {
+    padding: 0px 30px;
 }

@@ -20,6 +20,37 @@
                 <textarea id="postTextArea" rows="8" cols="90" name='postText'></textarea>
                 <input type="submit" value="Post a Message" id='postButton'>
             </form>
+            {% for post in posts %}
+                <div class='post'>   
+                    {% for user in users %}
+                        {% if user['id'] == post['users_id'] %}
+                            <p>{{user['first_name']}} {{user['last_name']}} {{post['created_at']}}</p>
+                        {% endif %}
+                    {% endfor %}
+                    <p></p>
+                    <p>{{post['message']}}</p>
+                    {% for comment in comments%}
+                        <!-- {% if comment['posts_id'] == None%}
+                            {% continue %}
+                        {% endif %} -->
+                        {% if comment['posts_id'] == post['id']%}
+                            <div class='comment'>
+                                {% for user in users %}
+                                    {% if user['id'] == comment['users_id'] %}
+                                        <p>{{user['first_name']}} {{user['last_name']}} {{comment['created_at']}}</p>
+                                    {% endif %}
+                                {% endfor %}
+                                <p>{{comment['comment']}}</p>
+                            </div>
+                        {% endif%}
+                    {% endfor %}
+                    <form action="/comment" method="post">
+                        <textarea name="comment" cols="85" rows="5"></textarea>
+                        <input type="hidden" name="postId" value="{{post['id']}}">
+                        <input type="submit" value="Post a comment" id='commentButton'>
+                    </form>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </body>
