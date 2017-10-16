@@ -1,0 +1,44 @@
+#wrapper{
+    width:1100px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 13px;
+}
+
+#goldDisplay {
+    display: block;
+    margin-bottom: 15px;
+    border: 3px solid black;
+}
+
+#yourGold {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#goldAmount {
+    width: 100px;
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    border: 3px solid black;
+    margin-top: 12px;
+}
+
+.locationBox{
+    width:245px;
+    margin: 10px;
+    display: inline-block;
+    border: 3px solid black;
+    text-align: center;
+}
+
+#activity{
+    width: 1000px;
+    height: 300px;
+    border: 3px solid black;
+    overflow: scroll;
+}
