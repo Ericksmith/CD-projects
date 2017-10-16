@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amadon</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'amadon/css/styles.css' %}">
+</head>
+<body>
+    <h1>Amadon Store!</h1>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            <form action="/process" method="post">
+                {% csrf_token %}
+                <tr>
+                    <td>Dojo T-shirt</td>
+                    <td>15.99</td>
+                    <td>
+                        <select name='amount'>
+                            <option value="1">1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                        </select>
+                        <input type="hidden" name="product_id" value='001'>
+                        <input type="submit" value="Buy">
+                    </td>
+                </tr>
+            </form>
+            <form action="/process" method="post">
+                {% csrf_token %}
+                <tr>
+                    <td>Dojo Jean Jacket</td>
+                    <td>35.99</td>
+                    <td>
+                        <select name='amount'>
+                            <option value="1">1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                        </select>
+                        <input type="hidden" name="product_id" value='002'>
+                        <input type="submit" value="Buy">
+                    </td>
+                </tr>
+            </form>
+            <form action="/process" method="post">
+                {% csrf_token %}
+                <tr>
+                    <td>Dojo uggs</td>
+                    <td>13.99</td>
+                    <td>
+                        <select name='amount'>
+                            <option value="1">1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                        </select>
+                        <input type="hidden" name="product_id" value='003'>
+                    <input type="submit" value="Buy">
+                </td>
+            </tr>
+        </form>
+            <form action="/process" method="post">
+                {% csrf_token %}
+                <tr>
+                    <td>Dojo balence braclet</td>
+                    <td>99.99</td>
+                    <td>
+                        <select name='amount'>
+                            <option value="1">1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                        </select>
+                        <input type="hidden" name="product_id" value='004'>
+                        <input type="submit" value="Buy">
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </form>
+</body>
+</html>

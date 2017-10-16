@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(218, 218, 218)
+}
+
+.box {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+    width: 20%
+}

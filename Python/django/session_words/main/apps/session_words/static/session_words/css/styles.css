@@ -1,0 +1,36 @@
+#leftContent {
+    display:inline-block;
+    width:40%;
+    border-right: 3px solid black;
+    height: 400px;;
+}
+
+#rightContent {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    height: 400px;
+}
+
+#rightContent  input {  
+    margin-left: 200px;
+    display: block;
+    background-color: rgb(250, 25, 100);
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.big {
+    font-size: 25px;
+    font-weight: bold;
+}

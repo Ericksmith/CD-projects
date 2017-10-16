@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout</title>
+</head>
+<body>
+    <h2>Thank you for your business</h2>
+    <p>{{request.session.currentTotal}}</p>
+    <p>You have ordered {{request.session.count}} so far and spent {{request.session.runningTotal}} with Amadon.com!</p>
+    <a href="/">Go back</a>    
+</body>
+</html>
