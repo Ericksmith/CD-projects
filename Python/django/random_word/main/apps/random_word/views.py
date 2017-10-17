@@ -9,12 +9,13 @@ from django.utils.crypto import get_random_string
 def index(request):
     if request.session.get('attempts') == None:
         request.session['attempts'] = 1
-    request.session['random_word'] = get_random_string(length=14)
+    
     return render(request, 'random_word/index.html')
 
 def generate(request):
     if request.method == 'POST':
         request.session['attempts'] += 1
+        request.session['random_word'] = get_random_string(length=14)
         return redirect('/')
     s = 'Problem'
     return HttpResponse(s)
