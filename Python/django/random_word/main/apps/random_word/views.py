@@ -17,8 +17,6 @@ def generate(request):
         request.session['attempts'] += 1
         request.session['random_word'] = get_random_string(length=14)
         return redirect('/')
-    s = 'Problem'
-    return HttpResponse(s)
 
 def reset(request):
     request.session['attempts'] = 1
