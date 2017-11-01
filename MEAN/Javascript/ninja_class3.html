@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja class 3</title>
+</head>
+<body>
+    <script>
+        class Ninja{
+            constructor(name, health=100, speed=3, strength=3 ) {
+                this.name = name;
+                this.health = health;
+                var speed = speed;
+                var strength = strength;
+            
+            this.showStats = function(){
+                console.log('Name: ' + this.name + ' Health: ' + this.health +', Speed: ' + speed + ', Strength: ' + strength);
+            }
+
+            this.kick = function(vic) {
+                if(vic instanceof Ninja){
+                    vic.health = vic.health - 15 * strength;
+                    console.log(vic.name + ' was kicked by ' + this.name + ' and lost ' + (15 * strength) + ' health!')
+                } else {
+                    console.log('Miss! That ninja does not exists');
+                }
+            }
+            }
+            punch(vic) {
+                if(vic instanceof Ninja){
+                    vic.health = vic.health - 5
+                    console.log(vic.name + ' was punched by ' + this.name + ' and lost 5 health!');
+                } else {
+                    console.log('Miss! That ninja does not exists');
+                }
+            }
+            drinkSake(){
+                this.health = this.health + 10;
+            }
+            sayName(){
+                console.log(this.name);
+            }
+        }
+
+        class Sensei extends Ninja {
+            constructor(name, health=200, strength=10, speed=10, wisdom=10){
+                this.name = name;
+                this.health = health;
+                var speed = speed;
+                var strength = strength;
+                var wisdom = wisdom;
+                this.showStats
+            }
+            speakWisdom(){
+                super.drinkSake();
+                console.log("What one programmer can do in one month, two programmers can do in two months.");
+            }
+        }
+
+        var blue_ninja = new Ninja("Goemon");
+        var red_ninja = new Ninja("Bill Gates");
+        blue_ninja.sayName();
+        blue_ninja.showStats();
+        red_ninja.kick(blue_ninja);
+        red_ninja.punch(blue_ninja);
+        blue_ninja.drinkSake();
+        blue_ninja.showStats();
+        let super_sensei = new Sensei("Master Splinter");
+        super_sensei.showStats();
+        super_sensei.speakWisdom();
+        super_sensei.showStats();
+
+    </script>
+</body>
+</html>

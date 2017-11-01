@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS intermediate</title>
+</head>
+<body>
+    <script>
+        console.log('part 1');
+        function starString(num) {
+            star = '*'
+            return star.repeat(num)
+        }
+        console.log(starString(8));
+        console.log(starString(20));
+        console.log('part 2');
+        function drawStars(arr){
+            star = '*'
+            for(var i = 0; i < arr.length; i++){
+                console.log(star.repeat(arr[i]));
+            }
+        }
+        drawStars([1,2,3,4,10]);
+        drawStars([30,40,3,20,50]);
+        console.log('part 3');
+        function drawStarsImproved(arr){
+            star = '*'
+            for(var i = 0; i < arr.length; i++){
+                if(typeof(arr[i])== 'string'){
+                    str = arr[i][0].toLowerCase();
+                    console.log(str.repeat(arr[i].length));
+                } else{
+                console.log(star.repeat(arr[i]));
+                }
+            }
+        }
+        drawStarsImproved([4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]);
+    </script>
+</body>
+</html>

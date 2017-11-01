@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS_library</title>
+</head>
+<body>
+    <script>
+        var _ = {
+            map: function(arr, callback) {
+                var newArr = [];
+                for(var i = 0; i < arr.length; i++){
+                    newArr.push(callback(arr[i]))
+                }
+                return newArr;
+            },
+
+            reduce: function(arr, callback, memo) { 
+                if(memo == null){
+                   memo = arr[0] 
+                   var x = 1;
+                } else {
+                    var x = 0;
+                }
+                for(var i = x; i <arr.length; i++){
+                    memo = callback(arr[i], memo);
+                }
+                return memo;
+            },
+
+            find: function(arr, callback) {   
+                for(var i = 0; i < arr.length; i++){
+                    if(callback(arr[i])){
+                        return arr[i];
+                    }
+                }
+                return undefined;
+            },
+
+            filter: function(arr, callback) { 
+                var newArr = [];
+                for(var i = 0; i < arr.length; i++){
+                    if(callback(arr[i])){
+                        newArr.push(arr[i]);
+                    }
+                }
+                return newArr
+            },
+
+            reject: function(arr, callback) { 
+                var newArr = [];
+                for(var i = 0; i < arr.length; i++){
+                    if(!callback(arr[i])){
+                        newArr.push(arr[i])
+                    }
+                }
+                return newArr;
+            }
+            }
+
+        console.log(_.filter([2,3,4,5], function(num){ return num%2 == 0}));
+        console.log(_.map([2,3,4,5], function(num){ return num * 10}));
+        console.log(_.map([2,3,4,5], function(num){ return num + 'hi'}));
+        console.log(_.find([3,1,4,5], function(num){ return num%2 == 0}));
+        console.log(_.reject([2,3,4,5], function(num){ return num%2 == 0}));
+        console.log(_.reduce([4,3,4,5], function(num, memo){ return num + memo; }));
+    </script>
+</body>
+</html>

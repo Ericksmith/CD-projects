@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deck of cards</title>
+</head>
+<body>
+    <script>
+        class Deck{
+            constructor(){
+                this.deck = [];
+            }
+            shuffle(){
+                for(var i = 0; i < 100000; i++){
+                    let index = Math.floor(Math.random() * 52);
+                    let index2 = Math.floor(Math.random() * 52);
+                    let temp = this.deck[index]
+                    this.deck[index] = this.deck[index2];
+                    this.deck[index2] = temp;
+                }
+                console.log(this.deck);
+            }
+
+            deal(){
+                return this.deck.pop();
+            }
+
+            reset() {
+                let suits = {
+                    0: 'c',
+                    1: 'h',
+                    2: 's',
+                    3: 'd',
+                }
+                let face = {
+                    0: '1',
+                    1: '2',
+                    2: '3',
+                    3: '4',
+                    4: '5',
+                    5: '6',
+                    6: '7',
+                    7: '8',
+                    8: '9',
+                    9: '10',
+                    10: 'j',
+                    11: 'q',
+                    12: 'k',
+                }
+                for(var i = 0; i < 4; i++){
+                    for(var x = 0; x < 13; x++ ){
+                        let card = suits[i] + face[x];
+                        this.deck.push(card)
+                    }
+
+                }
+            }
+        }
+
+        class Player extends Deck {
+            constructor(name){
+                super();
+                this.name = name;
+                this.hand = []
+            }
+
+            takeCard(deck) {
+                let card = deck.deal();
+                this.hand.push(card)
+            }
+
+            discard() {
+                return this.hand.pop()
+                
+            }
+        }
+
+        let deck1 = new Deck();
+        console.log(deck1);
+        deck1.reset()
+        deck1.shuffle();
+        console.log(deck1)
+        player1 = new Player('player1');
+        player1.takeCard(deck1);
+        player1.takeCard(deck1);
+        player1.takeCard(deck1);
+        player1.takeCard(deck1);
+        player1.takeCard(deck1);
+        player1.takeCard(deck1);
+        player1.takeCard(deck1);
+        player1.takeCard(deck1);
+        player1.takeCard(deck1);
+        player1.takeCard(deck1);
+        player1.takeCard(deck1);
+        console.log(player1.hand)
+        console.log(player1.discard());
+        console.log(player1.discard());
+        console.log(player1.discard());
+        console.log(player1.hand)
+    </script>
+</body>
+</html>

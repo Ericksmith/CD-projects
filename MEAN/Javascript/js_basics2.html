@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basics 2</title>
+</head>
+<body>
+    <script>
+        console.log('Test 1');
+        function magic_multiply(x, y){
+            if(typeof(y) == 'string') {
+                return 'Error: Can not Multiply by string'
+            } else if (typeof(x) == 'string') {
+                x = x.repeat(y)
+            }else if (Array.isArray(x)){
+                for(var i = 0; i < x.length; i++){
+                    x[i] = x[i] * y;
+                }
+            } else {
+            x = x * y;
+        }
+            return x;
+        }
+        let test1 = magic_multiply(5, 2);
+        console.log(test1);
+        console.log('Test 2');
+        let test2 = magic_multiply(0, 0);
+        console.log(test2);
+        console.log('Test 3');
+        let test3 = magic_multiply([1, 2, 3], 2);
+        console.log(test3);
+        console.log('Test 4');
+        let test4 = magic_multiply(7, "three");
+        console.log(test4);
+        console.log('Test 5');
+        let test5 = magic_multiply("Brendo", 4);
+        console.log(test5);
+    </script>
+</body>
+</html>
