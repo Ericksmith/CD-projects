@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Query</title>
+</head>
+<body>
+    <button id='click'>Click</button>
+    <button id='hover'>Hover over me</button>
+    <script>
+        (function (global){
+            DojoQuery = function(selectorId){
+                var selectedId = document.getElementById(selectorId);
+                console.log(selectedId);
+                this.hover = function(hoverOnCallback, hoverOffCallback){
+                    selectedId.addEventListener('mouseover', hoverOnCallback);
+                    selectedId.addEventListener('mouseout', hoverOffCallback);
+                    return this;
+                }
+                this.click = function(clickCallback){
+                    selectedId.addEventListener('click', clickCallback);
+                    return this;
+                }
+                return this;
+            }
+            global.$Dojo = DojoQuery;
+            return DojoQuery;
+        })(window);
+    </script>
+</body>
+    <script>
+            $Dojo("click").click(function() { console.log("The button was clicked!") });
+            $Dojo("hover").hover(function() { console.log("The button was hovered on!") });
+    </script>
+</html>

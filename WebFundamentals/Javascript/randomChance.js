@@ -38,7 +38,7 @@ function slotMachine(cashoutAmount) {
             break;
         } else {
             coins--;
-        }
+        } 
     }
     return("You ran out of money, hit the streets.")
 }

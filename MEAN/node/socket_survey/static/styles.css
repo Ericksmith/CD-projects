@@ -1,0 +1,12 @@
+#result{
+    border: 2px solid black;
+    padding: 5px;
+    width: 280px;
+    background-color: greenyellow
+}
+
+form{
+    border: 2px solid black;
+    padding: 5px;
+    width: 280px;
+}

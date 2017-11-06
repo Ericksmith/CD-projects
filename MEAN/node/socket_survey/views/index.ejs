@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+   
+</head>
+<body>
+    <div id='result'></div>
+    <form>
+        <p>Your Name: <input type="text" name="name" id='name'></p>
+        <p>Dojo Location: <select name="location" id='location'>
+            <option value="burbank">Burbank</option>    
+            <option value="seattle">Seattle</option>    
+            <option value="mountain_view">Mountain View</option>    
+        </select></p>
+        <p>Javascript: <select name="language" id='language'>
+                <option value="javascript">Javascript</option>    
+                <option value="python">Python</option>    
+                <option value="ruby">Ruby</option>    
+        </select></p>
+        <p>Comment (optional):</p>
+        <textarea name="comment" id='comment' cols="30" rows="10"></textarea>
+        <button>Submit</button>
+    </form>
+</body>
+
+<script>
+    var socket  = io.connect();
+    $( 'button').click(function (e){
+        formData = $('form').serializeArray();
+        e.preventDefault();
+        socket.emit( "button_clicked", formData);
+    });
+    socket.on( 'server_response', function (data){
+        formData = data.data
+        let message = '<p>You emmited the following information to the server: ' + JSON.stringify(formData) + '<br>'
+        let number = 'Your lucky number emitted by the server is ' + data.number + '.</p>'
+        $('#result').html(message + number)
+    });
+</script>
+
+</html>
