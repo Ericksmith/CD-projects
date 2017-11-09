@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Current penguin</title>
+</head>
+<body>
+    <h1><%=penguin[0]._id%></h1>
+    <h1><%=penguin[0].name%> </h1>
+    <h1><%=penguin[0].createdAt%></h1>
+    <form action="/penguins/destroy/<%=penguin[0]._id%>" method="post">
+        <input type="submit" value="Delete this penguin from DB">
+    </form>
+    <a href="/penguins/edit/<%=penguin[0]._id%>"><button>Edit penguin</button></a>
+
+</body>
+</html>

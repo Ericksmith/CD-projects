@@ -20,16 +20,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Require path
 var path = require('path');
 // Setting our Static Folder Directory
-app.use(express.static(path.join(__dirname, './static')));
+app.use(express.static(path.join(__dirname, 'static')));
 // Setting our Views Folder Directory
-app.set('views', path.join(__dirname, './views'));
+app.set('views', path.join(__dirname, '/views'));
 // Setting our View Engine set to EJS
 app.set('view engine', 'ejs');
 // Routes
 // Root Request
 app.get('/', function(req, res) {
     // This is where we will retrieve the users from the database and include them in the view page we will be rendering.
-    User.find({}, function(err, users) {
+    User.find({}, (err, users)=> {
         if(err){
             var context = {
                 'result': ['Something went wrong']
@@ -39,8 +39,8 @@ app.get('/', function(req, res) {
                 'result': users
             }
         }
+        res.render('index', context);
     })
-    res.render('index', context);
 })
 // Add User Request 
 app.post('/users', function(req, res) {

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+</head>
+<body>
+    <a href="/penguins/new">Add a penguin</a>
+    <h1>All penguins</h1>
+    <% for(var penguin of all_penguins) { %>
+        <p><strong>Name:</strong> <%= penguin.name %></p>
+        <a href="/penguins/<%= penguin.id %>"><p><strong>id:</strong> <%= penguin.id %></p></a>
+        <p><strong>Created at: </strong><%= penguin.createdAt %></p>
+        <hr>
+    <% } %>
+</body>
+</html>
