@@ -1,0 +1,9 @@
+div{
+    border: 1px solid black;
+    background-color: lightsalmon;
+    width: 250px;
+    margin-left: 10px;
+    height: 130px;
+    display: inline-block;
+    vertical-align: top;
+}

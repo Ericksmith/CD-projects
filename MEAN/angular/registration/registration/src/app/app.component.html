@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registration</title>
+</head>
+<body>
+  <h1>Registration</h1>
+  <div id="message" *ngIf="message !== ''">{{message}}</div>
+  <div id="wrapper">
+  <form (submit)="onSubmit()" #registerForm="ngForm">
+    <p>*First Name: <input type="text" 
+      name="firstName" 
+      required
+      minlength="2"
+      maxlength="24"
+      [(ngModel)]="user.firstName"
+      #firstName="ngModel">
+      <span *ngIf="firstName.errors">Your name must be atleast 2 characters</span>
+    </p>
+    <p>*Last Name: <input type="text" 
+      name="lastName"
+      [(ngModel)]="user.lastName"
+      required
+      minlength="2"
+      maxlength="24"
+      [(ngModel)]="user.lastName"
+      #lastName="ngModel">
+      <span *ngIf="lastName.errors">Your name must be atleast 2 characters</span>
+    </p>
+    <p>*Email: <input type="email" name="email"
+      [(ngModel)]="user.email"
+      required
+      minlength="4"
+      maxlength="24"
+      ng-pattern="\d+"
+      [(ngModel)]="user.email"
+      #email="ngModel"
+      (change)="checkEmail()">
+      <span *ngIf="!isEmailValid">Invalid email format</span>
+    </p>
+    <p>*Password: <input type="password" name="password"
+      [(ngModel)]="user.password"
+      required
+      minlength="8"
+      maxlength="24"
+      [(ngModel)]="user.password"
+      #password="ngModel">
+      <span *ngIf="password.errors">Your password must be atleast 8 characters</span>
+    </p>
+    <p>*Confirm Password: <input type="password" name="confirmPassword"
+      [(ngModel)]="user.confirmPassword">
+      <span *ngIf="user.password !== user.confirmPassword">Password does not match</span>
+    </p>
+    <p>*Street: <input type="text" name="street" 
+      [(ngModel)]="user.street"
+      required
+      minlength="4"
+      maxlength="24"
+      [(ngModel)]="user.street"
+      #street="ngModel">
+      <span *ngIf="street.errors">Please enter your street name</span>
+    </p>
+    <p>Apt: <input type="text" name="apt"></p>
+    <p>*City: <input type="text" name="city"
+      [(ngModel)]="user.city"
+      required
+      minlength="2"
+      maxlength="24"
+      [(ngModel)]="user.city"
+      #city="ngModel"
+      >
+      <span *ngIf="city.errors">Please enter your City name</span>
+    </p>
+    <p><select name="state" [(ngModel)]='user.state' #state="ngModel">
+      <option value="alaska">Alaska</option>
+      <option value="california">California</option>
+    </select>
+    <span *ngIf="user.state == ''">Please enter your state</span>
+    </p>
+    <p>*I'm feeling Lucky:<input type="radio" name="lucky" value="yes" [(ngModel)]="user.lucky">Yes 
+    <input type="radio" name="lucky" value="no" [(ngModel)]="user.lucky">No
+    <span *ngIf="user.lucky == ''">Please enter your lucky status</span></p>
+    <input type="submit" value="Register" [disabled]="registerForm.invalid">
+    </form>
+  </div>
+</body>
+</html>
+

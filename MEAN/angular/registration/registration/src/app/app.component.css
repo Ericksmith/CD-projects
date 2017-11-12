@@ -1,0 +1,18 @@
+#wrapper {
+    width: 800px;
+    margin: auto;
+    height: 400px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+span {
+    color: maroon;
+}
+
+#message {
+    border: 1px solid black;
+    color: green;
+    width: 300px;
+    height: 100px;
+}

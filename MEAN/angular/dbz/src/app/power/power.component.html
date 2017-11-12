@@ -1,0 +1,21 @@
+<div id="wrapper">
+  <div id="selector">
+        <p>Intial Power Level: 
+          <input type="number" name="newPower" min="1" max="100" [(ngModel)]="power">
+          <button (click)="calcPower()"> Calculate power</button>
+        </p>
+  </div>
+  <div class="row">
+      <div id="human">
+        <p>HumanComponent</p>
+        <p>Power Level: {{power}}</p>
+      </div>
+      <app-saiyan [saiyanPower]="power" ></app-saiyan>
+      <app-super-saiyan [superSaiyan]="power"></app-super-saiyan>
+  </div>
+  <div class="row">
+      <app-super-saiyan-two [superSaiyan2]="power"></app-super-saiyan-two>
+      <app-super-saiyan-three [superSaiyan3]="power"></app-super-saiyan-three>
+      <app-super-saiyan-four [superSaiyan4]="power"></app-super-saiyan-four>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Time Zones</title>
+</head>
+<body>
+  <h1>Us Time Zone Display</h1>
+  <div id="wrapper">
+    <div id="pst"><button (click)="displayTime('PST') " [ngClass]="{ 'yellow': timezone === 'PST' }">PST</button></div>
+    <div id="mst"><button (click)="displayTime('MST')" [ngClass]="{ 'yellow': timezone === 'MST' }">MST</button></div>
+    <div id="cst"><button (click)="displayTime('CST')" [ngClass]="{ 'yellow': timezone === 'CST' }">CST</button></div>
+    <div id="est"><button (click)="displayTime('EST')" [ngClass]="{ 'yellow': timezone === 'EST' }">EST</button></div>
+    <div id="clear"><button (click)="clear()">Clear</button></div>
+  </div>
+  <h1 *ngIf="showTime">{{ current_date | date: "yMMMdjms"}} {{timezone}}</h1>
+</body>
+</html>
+

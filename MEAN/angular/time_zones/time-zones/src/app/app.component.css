@@ -1,0 +1,13 @@
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-gap: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.yellow {
+    background-color: yellow;
+}

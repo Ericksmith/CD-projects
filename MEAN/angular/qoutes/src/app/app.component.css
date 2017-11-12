@@ -1,0 +1,29 @@
+.qouteBox {
+    border: 1px solid black;
+    width: 900px;
+    height: 150px;
+    display: block;
+}
+
+.qouteLeft {
+    display: inline-block;
+    width: 500px;
+}
+
+.qouteMid{
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    margin-right: 100px;
+}
+
+.qouteRight{
+    display: inline-block;
+    width: 100px;
+}
+
+
+button{
+    display: block;
+}
+

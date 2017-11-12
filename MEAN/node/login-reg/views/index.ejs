@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <style>
+            form {
+                width: 500px;
+                height: 200px;
+                border: 2px solid black
+            }
+            
+            
+            label{
+                display: inline-block;
+                float: left;
+                clear: left;
+                width: 250px;
+                text-align: right;
+            }
+            
+            input {
+              display: inline-block;
+              float: left;
+            }
+            
+            .errorMessage {
+                color: red;
+            }
+    </style>
+</head>
+<body>
+        <h1>Registration</h1>
+        <ul class="messages">
+        </ul>
+        <form action="/register" method="POST" id='register'>
+            <div class='row'>
+            <label for="first_name">First name:</label>
+            <input type="text" name="first_name">
+            </div>
+            <div class='row'>
+            <label for="last_name">Last name:</label>
+            <input type="text" name="last_name">
+            </div>
+            <div class='row'>
+            <label for="email">Email:</label>
+            <input type="text" name="email">
+            </div>
+            <div class='row'>
+            <label for="password">Password:</label>
+            <input type="password" name="password">
+            </div>
+            <div class='row'>
+            <label for="confirm_password">Confirm password:</label>
+            <input type="password" name="confirm_password">
+            </div>
+            <label for="birthday">Birthday:</label>
+            <input type="date" name="birthday">
+            <input type="submit" value="Register">
+        </form>
+        <h2>Existing user sign in:</h2>
+        <form action="/signIn" method="post">
+            <label for="email">Email:</label>
+            <input type="text" name='email'>
+            <label for="password">Password:</label>
+            <input type="text" name="password">
+            <input type="submit" value="Sign in">
+        </form>
+</body>
+</html>

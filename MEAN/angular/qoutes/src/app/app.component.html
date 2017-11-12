@@ -1,0 +1,22 @@
+<h1>Add a Qoute</h1>
+<form #qouteForm="ngForm" (ngSubmit)="onSubmit(qouteForm)">
+  <textarea name="qoute" cols="30" rows="10" ngModel></textarea>
+  <p>Author: <input type="text" name="author" ngModel></p>
+  <input type="submit" value="Add Qoute">
+</form>
+<h3>Qoute List</h3>
+  <div class="qouteBox" *ngFor="let qoute of qoutes; let idx = index">
+    <div class="qouteLeft">
+    <p>{{qoute.qoute}}</p>
+    <p>{{qoute.author}}</p>
+  </div>
+  <div class="qouteMid">
+    <h1>Votes: {{qoute.votes}}</h1>
+    
+  </div>
+    <div class="qouteRight">
+    <button (click)="upVote(idx)" >Vote Up</button>
+    <button (click)="downVote(idx)">Vote Down</button>
+    <button (click)="delete(idx)">Delete</button>
+  </div>
+  </div>
