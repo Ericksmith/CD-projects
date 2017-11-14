@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<fieldset>
+  <legend>Burbank, CA</legend>
+  <div id="leftContent" *ngIf="weather">
+  <p>Humidity: {{weather['humidity']}}</p>
+  <p>Current: {{weather.current}}</p>
+  <p>High: {{weather.high}}</p>
+  <p>Low: {{weather.low }}</p>
+  <p>Current: {{weather.current}}</p>
+  </div>
+  <div id="rightContent">
+  <img src="https://static.pexels.com/photos/164183/pexels-photo-164183.jpeg">
+  </div>
+</fieldset>

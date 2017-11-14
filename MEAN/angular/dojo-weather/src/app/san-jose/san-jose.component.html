@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<fieldset>
+    <legend>San Jose, IL</legend>
+    <div id="leftContent" *ngIf="weather">
+    <p>Humidity: {{weather['humidity']}}</p>
+    <p>Current: {{weather.current}}</p>
+    <p>High: {{weather.high}}</p>
+    <p>Low: {{weather.low }}</p>
+    <p>Current: {{weather.current}}</p>
+    </div>
+    <div id="rightContent">
+    <img src="https://static.pexels.com/photos/281184/pexels-photo-281184.jpeg">
+    </div>
+  </fieldset>

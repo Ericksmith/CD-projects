@@ -1,0 +1,16 @@
+fieldset{
+    height: 350px;
+}
+
+img{
+    width: 300px;
+}
+
+#leftContent{
+    display: inline-block;
+    width: 500px;
+}
+
+#rightContent {
+    display: inline-block;
+}
