@@ -8,12 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PowerComponent implements OnInit {
 
-  power: number = undefined;
+  power: number;
 
   constructor() {
    }
 
+
+   
   ngOnInit() {
+    this.power = 1
   }
 
 }

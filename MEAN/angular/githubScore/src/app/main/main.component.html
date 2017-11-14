@@ -1,0 +1,14 @@
+<div id="wrapper">
+    <div id="leftConent">
+      <h1>GitHub Score</h1>
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <p> Github Username: <input type="text" name="user" ngModel></p>
+        <input type="submit" value="Calculate my GitHub Score">
+      </form>
+    </div>
+    <div id="rightConent" *ngIf="result.response">
+      <h3>{{result.response}}</h3>
+      <h3 *ngIf="feedback" class="{{feedback.css}}" >{{feedback.message}}</h3>
+  </div>
+</div>
+  

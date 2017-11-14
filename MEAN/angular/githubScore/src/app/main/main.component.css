@@ -1,0 +1,39 @@
+#wrapper {
+    border: 3px solid black;
+    width: 1000px;
+    height: 200px;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+#leftConent {
+    display: inline-block;
+    width: 300px;
+    margin-right: 200px;
+}
+
+#rightConent {
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.black{
+    color: black;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
