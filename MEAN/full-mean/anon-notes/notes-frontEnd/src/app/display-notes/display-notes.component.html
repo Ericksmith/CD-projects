@@ -1,0 +1,4 @@
+<div id="displayWrapper" *ngIf="notes">
+  <div id="noteBox" *ngFor="let note of notes">{{note.note}} <span>{{note.createdAt}}</span><br><br><hr>
+  </div>
+</div>

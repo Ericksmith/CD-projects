@@ -1,0 +1,16 @@
+#displayWrapper{
+    width: 800px;
+    border: 1px solid black;
+    background-color: white;
+    margin:auto;
+    padding: 15px;
+}
+
+#noteBox {
+    width: 700px;
+    margin-top: 15px;
+}
+
+span{
+    float: right;
+}

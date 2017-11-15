@@ -1,0 +1,5 @@
+<div id='addWrapper'>
+  <form #newNote="ngForm" (ngSubmit)="onSubmit(newNote)">
+  <p>Note: <input type="text" name="note" ngModel> <input type="submit" value="Add Note"></p>
+  </form>
+</div>
