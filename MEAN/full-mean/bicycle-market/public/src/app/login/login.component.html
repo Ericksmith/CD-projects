@@ -1,0 +1,66 @@
+<h1>Bicycle Marketplace</h1>
+
+<div id="wrapper">
+  <div class="bikeOfTheDay">
+
+  </div>
+  <div class='login'>
+    <form #loginForm="ngForm" (submit)="login()">
+      <label for="email">Email: </label>
+      <input type="email"
+      name="email"
+      required
+      minlength="2"
+      maxlength="50"
+      [(ngModel)]="login_data.email"
+      #email="ngModel">
+      <label for="password">Password: </label>
+      <input type="password"
+      name="password"
+      required
+      minlength="2"
+      maxlength="100"
+      [(ngModel)]="login_data.password"
+      #password="ngModel">
+      <input type="submit" value="Login" [disabled]="loginForm.invalid">
+    </form>
+  </div>
+  <div class='register'>
+    <form #regForm="ngForm" (submit)="register()">
+      <label for="firstName">*First Name: <span *ngIf="firstName.invalid">  Required</span></label>
+      <input type="text" name="firstName"
+      [(ngModel)]="reg_data.firstName"
+      required
+      minlength="2"
+      #firstName="ngModel">
+      <label for="lastName">*Last Name: <span *ngIf="lastName.invalid">  Required</span></label>
+      <input type="text" name="lastName"
+      required
+      minlength="2"
+      [(ngModel)]="reg_data.lastName"
+      #lastName="ngModel">
+      <label for="email">*Email: <span *ngIf="email.invalid">  Required</span></label>
+      <input type="text" name="Email"
+      required
+      minlength="2"
+      [(ngModel)]="reg_data.email"
+      #email="ngModel">
+      <label for="password">*Password: <span *ngIf="password.invalid">  Required length of 8 characters</span></label>
+      <input type="password" name="password"
+      required
+      minlength="8"
+      maxlength="100"
+      [(ngModel)]="reg_data.password"
+      #password="ngModel">
+      <label for="confirmPass">*Password Confirm: <span *ngIf="reg_data.password !== reg_data.confirmPass ">  Does not much your password</span></label>
+      <input type="password" name="confirmPass"
+      required
+      minlength="8"
+      maxlength="100"
+      [(ngModel)]="reg_data.confirmPass"
+      #confirmPass="ngModel">
+      <input type="submit" value="Register" [disabled]="regForm.invalid || reg_data.password !== reg_data.confirmPass">
+    </form>
+  </div>
+
+</div>

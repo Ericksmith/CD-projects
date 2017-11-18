@@ -1,0 +1,73 @@
+<h1>Bicycle MarketPlace</h1>
+<h3><a [routerLink]="['/browse']">Browse</a> | <a [routerLink]="['/listings']">My Listings</a> | <a href="/logout">Log off</a></h3>
+<div id="wrapper">
+  <div id="create">
+    <h2>Create Listing</h2>
+    <form #listingForm="ngForm" (submit)="createListing()">
+    <div id="createField">
+        <div id="createLeft">
+          <label for="title">Title:</label>
+          <input type="text" name="title"
+          required
+          minlength="2"
+          [(ngModel)]="bike.title"
+          #title="ngModel">
+           <label for="price">Price: </label>
+        <input type="number" name="price"
+        required
+        min="1"
+        [(ngModel)]="bike.price"
+        #price="ngModel">
+        <label for="location">Location</label>
+        <input type="text" name="location"
+        required
+        [(ngModel)]="bike.location"
+        #location="ngModel">
+        </div>
+        <div id="createMid">
+          <label for="discription">Discription</label>
+          <textarea name="discription" cols="30" rows="10" 
+          required
+          minlength="2"
+          maxlength="200"
+          [(ngModel)]="bike.discription"
+          #discription="ngModel"></textarea>
+        </div>
+        <div id="createRight">
+          <label for="image">Image</label>
+          <input type="url" name="image" 
+          required
+          [(ngModel)]="bike.image"
+          #image="ngModel">
+          <input type="submit" value="Create">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id="edit">
+    <h2>Edit/Delete Listings</h2>
+    <div id="listingField">
+      
+      <div class='bikes' *ngFor="let bike of allBikes"> 
+        <div class='image'>
+          <p>Image Upload</p>
+          <img src="{{bike.image}}">
+        </div>
+        <div class="editMid">
+          <p>Title:</p>
+          <input type="text" name="title" value="{{bike.title}}">
+          <p>Discription:</p>
+          <textarea name="discription" cols="30" rows="10">{{bike.discription}}</textarea>
+        </div>
+        <div class="editRight">
+          <p>Price:</p>
+          <input type="text" name="price" value="{{bike.price}}">
+          <p>location:</p>
+          <input type="text" name="location" value="{{bike.location}}">
+          <input type="submit" value="Update">
+          <button (click)="deleteBike()">Delete</button>
+        </div>
+    </div>
+  </div>
+  </div>
+</div>

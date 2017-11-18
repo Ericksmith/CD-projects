@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div id="wrapper">
+  <h2>Player Status - Game </h2>
+  <h3><a [routerLink]="['/status','game', '1']">Game 1</a> | <a [routerLink]="['/status','game', '2']">Game 2</a> | <a [routerLink]="['/status','game', '3']">Game 3</a></h3>
+  <table>
+    <tr>
+      <th>Player name:</th>
+      <th>Action: </th>
+    </tr>
+    <tr *ngFor="let player of players">
+        <td>{{player.name}}</td>
+        <td *ngIf="player[gameNum] == 'Undecided'"><button  (click)="playingInGame(player._id)">Playing</button> <button (click)="notPlayingInGame(player._id)">Not Playing</button> <button class="yellow">Undecided</button></td>
+        <td *ngIf="player[gameNum] == 'playing'"><button  class='green'>Playing</button> <button (click)="notPlayingInGame(player._id)">Not Playing</button> <button (click)="undecided(player._id)">Undecided</button></td>
+        <td *ngIf="player[gameNum] == 'notplaying'"><button  (click)="playingInGame(player._id)">Playing</button> <button class='red'>Not Playing</button> <button (click)="undecided(player._id)">Undecided</button></td>
+    </tr>
+  </table>
+
+</div>

@@ -1,0 +1,26 @@
+#wrapper {
+    border: 3px solid black;
+    margin: 15px auto;
+    padding: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 15px auto;
+}
+
+table, th, td {
+    border: 1px solid black
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}

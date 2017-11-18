@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div id="wrapper">
+    <h3><a href="/players/list">List</a> | <a href="players/addplayer">Add Player</a></h3>
+  <div id="addPlayer">
+    <h3>Add Player</h3>
+    <form #newPlayer="ngForm" (ngSubmit)="addPlayer(newPlayer)">
+      <p>Player Name: <input type="text" name="name" ngModel></p>
+      <p>Preferred Position: <input type="text" name="position" ngModel></p>
+      <input type="submit" value="Add">
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+#wrapper{ 
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(80px, auto)
+}
+
+.bikeOfTheDay{
+    grid-column: 2/8 ;
+    grid-row: 1/4;
+    border: 2px solid black;
+}
+
+.login{
+    grid-column: 1/5;
+    grid-row: 4/7;
+    border: 2px solid black;
+    padding: 30px;
+}
+
+.register{
+    grid-column: 5/9;
+    grid-row: 4/7;
+    border: 2px solid black;
+    padding: 30px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+h1{
+    margin-left: 20px;
+}
+
+span {
+    color: red;
+}

@@ -1,0 +1,95 @@
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-columns: minmax(250px, auto);
+    grid-auto-rows: minmax(100px, auto);
+    border: 2px solid black;
+}
+
+#create{
+    grid-column: 1/9;
+    grid-row: 1/4;
+    border: 2px solid black;
+    background-color: rgb(206, 206, 206);
+    padding: 0px 15px 10px 15px;
+}
+
+#edit{
+    grid-column: 1/9;
+    grid-row: 4/7;
+    border: 2px solid black;
+    background-color: rgb(206, 206, 206);
+    padding: 0px 15px 10px 15px;
+    overflow: scroll;
+
+
+}
+
+#createField{
+    background-color: white;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+    grid-gap: 5px;
+}
+
+#createLeft{
+    grid-column: 1
+}
+
+#createMid{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#createRight{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#listingField{
+    width: 100%;
+    margin: auto;
+    height: 70%;
+    background-color: white;
+    border: 2px solid black;
+
+
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+textarea {
+    width: 90%;
+    word-wrap: break-word;
+}
+
+.bikes{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+img{
+    width: 250px;
+}
+
+.image{
+    grid-column: 1/3
+}
+.editMid{
+    grid-column: 3/6
+}
+
+.editRight{
+    grid-column: 6
+}

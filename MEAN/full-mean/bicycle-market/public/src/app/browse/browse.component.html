@@ -1,0 +1,10 @@
+<h1>Bicycle MarketPlace</h1>
+<h3><a [routerLink]="['/browse']">Browse</a> | <a [routerLink]="['/listings']">My Listings</a> | <a href="/logout">Log off</a></h3>
+<div id="wrapper">
+    <div>
+        <p>Search <input type="text" (keyup)="search()" name="searchString"  [(ngModel)]="searchString"></p>
+    </div>
+    <div id="bikeArea">
+        <div class='bike' *ngFor="let bike of allBikes">{{bike.title}}</div>
+    </div>
+</div>
